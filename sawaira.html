@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sawaira Anwar's CV</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding-top: 80px; /* Offset for fixed header */
+            transition: background-color 0.3s, color 0.3s;
+            background: linear-gradient(to bottom, #FAE1D4, #CBBE8D);
+            color: #001524;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        header {
+            background-color: #445D48;
+            color: #FDE5D4;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cv-title {
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 20px 0;
+            color: #5E3023;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 150px;
+            width: 30%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 50px 10%;
+            margin-bottom: 30px;
+            background-color: #FDE5D4;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #5E3023;
+        }
+
+        p, li {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        /* Dark Theme */
+        .dark-theme {
+            background-color: #001524;
+            color: #FDE5D4;
+        }
+
+        .dark-theme header {
+            background-color: #5E3023;
+            color: #FDE5D4;
+        }
+
+        .dark-theme section {
+            background-color: #5E3023;
+            color: #FDE5D4;
+        }
+
+        .dark-theme h2, 
+        .dark-theme p, 
+        .dark-theme li {
+            color: #FDE5D4; /* Rosy creme */
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #001524, #445D48);
+            color: #CBBE8D;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px; /* Reduce offset for smaller screens */
+            }
+
+            header {
+                padding: 10px 2%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            img {
+                max-width: 120px;
+                width: 40%;
+            }
+
+            section {
+                padding: 30px 5%;
+            }
+
+            table, th, td {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 50px;
+            }
+
+            h1, .cv-title {
+                font-size: 1.5rem;
+            }
+
+            img {
+                max-width: 100px;
+                width: 50%;
+            }
+
+            section {
+                padding: 20px 5%;
+            }
+
+            table, th, td {
+                font-size: 0.8rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+
+        #themeToggleBtn {
+            background-color: #001524;
+            color: #FDE5D4;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #themeToggleBtn:hover {
+            background-color: #445D48;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="themeToggleBtn">Switch Theme</button>
+    </header>
+    <h1 class="cv-title">Sawaira Anwar's CV</h1>
+    <img src="https://rajueditor.net/wp-content/uploads/2024/04/islamic-dp-boy-and-girl.jpeg" alt="Sawaira Anwar">
+
+    <section>
+        <h2>Objective</h2>
+        <p>
+            A motivated first-semester Computer Science student with a passion for learning programming and problem-solving. 
+            Seeking opportunities to apply basic coding skills and gain hands-on experience in software development. 
+            Also eager to explore web development. Looking for opportunities to enhance skills in HTML, CSS, and JavaScript 
+            while contributing to real-world projects.
+        </p>
+    </section>
+
+    <section>
+        <h2>Personal Information</h2>
+        <ul>
+            <li><b>Name:</b> Sawaira Anwar</li>
+            <li><b>Father's Name:</b> Anwar-ul-Haq Paracha</li>
+            <li><b>Nationality:</b> Pakistani</li>
+            <li><b>Phone No:</b> 0333333333</li>
+            <li><b>Email:</b> example@gmail.com</li>
+            <li><b>Address:</b> Misrial Road Lane No 5</li>
+            <li><b>Marital Status:</b> Single</li>
+            <li><b>Date of Birth:</b> dd/mm/yyyy</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Degree</th>
+                    <th>University</th>
+                    <th>GPA/%age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1998-2001</td>
+                    <td>MS in AI</td>
+                    <td>FAST University</td>
+                    <td>3.6</td>
+                </tr>
+                <tr>
+                    <td>1995-1998</td>
+                    <td>BS in CS</td>
+                    <td>NUTECH University</td>
+                    <td>3.7</td>
+                </tr>
+                <tr>
+                    <td>1993-1995</td>
+                    <td>F.Sc</td>
+                    <td>Emalah Foundation College</td>
+                    <td>90%</td>
+                </tr>
+                <tr>
+                    <td>1991-1993</td>
+                    <td>S.Sc</td>
+                    <td>Emalah Foundation School</td>
+                    <td>96%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Organization/Place</th>
+                    <th>Post/Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2015-2020</td>
+                    <td>ABC</td>
+                    <td>CEO</td>
+                </tr>
+                <tr>
+                    <td>2009-2014</td>
+                    <td>DEF</td>
+                    <td>HR</td>
+                </tr>
+                <tr>
+                    <td>2003-2008</td>
+                    <td>GHT</td>
+                    <td>Manager</td>
+                </tr>
+                <tr>
+                    <td>2001-2002</td>
+                    <td>LMN</td>
+                    <td>Assistant Manager</td>
+                </tr>
+                <tr>
+                    <td>2001 (3 months)</td>
+                    <td>XYZ</td>
+                    <td>Manager</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Technical Skills/Awards/Certificates</h2>
+        <ul>
+            <li><b>1996:</b> Most Hardworking Student of the Session</li>
+            <li><b>2004:</b> Most Successful Assistant Manager</li>
+            <li><b>1995:</b> Excellent Project Manager</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sawaira Anwar. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        themeToggleBtn.addEventListener('click', function () {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>

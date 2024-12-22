@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Services Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #FDE5D4; /* Rosy creme */
+            color: #001524; /* Almost black */
+            line-height: 1.6;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        button {
+            font-family: 'Roboto', sans-serif;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background-color: #5E3023; /* Espresso */
+            color: #FDE5D4; /* Rosy creme */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #445D48; /* Olive green */
+            transform: scale(1.05);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #445D48; /* Olive green */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #D6CC99; /* Almost mint */
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #445D48, #D6CC99);
+            color: #FDE5D4; /* Rosy creme */
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .services {
+            padding: 60px 20px;
+            background-color: #FDE5D4; /* Rosy creme */
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #445D48; /* Olive green */
+        }
+
+        .services .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .services .service {
+            background: #D6CC99; /* Almost mint */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .services .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .services .service h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #5E3023; /* Espresso */
+        }
+
+        footer {
+            background: #001524; /* Almost black */
+            color: #FDE5D4; /* Rosy creme */
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer .social-links a {
+            margin: 0 10px;
+            color: #D6CC99; /* Almost mint */
+            font-size: 18px;
+        }
+
+        footer .social-links a:hover {
+            color: #FDE5D4;
+        }
+
+        /* Dark Theme */
+        body.dark-theme {
+            background-color: #001524;
+            color: #FDE5D4;
+        }
+
+        body.dark-theme header {
+            background: #5E3023;
+        }
+        
+        body.dark-theme .hero {
+            background: linear-gradient(135deg, #001524, #445D48);
+        }
+
+        body.dark-theme .services {
+            background-color: #001524;
+        }
+
+        body.dark-theme .services .service
+        body.dark-theme .services .service h3, {
+            background: #5E3023;
+            color: #FDE5D4;
+        }
+        body.dark-theme .services .service p {
+            color: #0f0d0c;
+        }
+
+        body.dark-theme footer {
+            background: #5E3023;
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle-switch label {
+            display: flex;
+            align-items: center;
+            background-color: #445D48;
+            border-radius: 15px;
+            width: 50px;
+            height: 25px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-switch label::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #FDE5D4;
+            border-radius: 50%;
+            position: absolute;
+            left: 3px;
+            top: 2.5px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + label {
+            background-color: #D6CC99;
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + label::after {
+            transform: translateX(25px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Timeless Services</div>
+        <nav>
+            <ul>
+                <li><a href="SBJ.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+                        <label for="theme-toggle"></label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Welcome to Timeless Services</h1>
+        <p>Your one-stop solution for professional and creative services.</p>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service">
+                <h3>C++ Programming</h3>
+                <p>Master advanced C++ programming techniques, including game development and efficient algorithm design.</p>
+            </div>
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>Learn to build stunning, responsive websites using HTML, CSS, and JavaScript. Ideal for beginners and experts alike.</p>
+            </div>
+            <div class="service">
+                <h3>Graphic Designing</h3>
+                <p>Unleash your creativity with our graphic design courses, focusing on tools like Photoshop, Illustrator, and more.</p>
+            </div>
+            <div class="service">
+                <h3>Digital Marketing</h3>
+                <p>Develop skills in SEO, content marketing, and social media strategies to grow your brand online.</p>
+            </div>
+            <div class="service">
+                <h3>Photography</h3>
+                <p>Learn the art of capturing moments with our photography courses, from basics to advanced techniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Timeless Services. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>

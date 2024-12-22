@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Services</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding-top: 80px; /* Offset for fixed header */
+            background-color: #FDE5D4; /* Rosy creme */
+            color: #001524; /* Almost black */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #445D48, #D6CC99); /* Olive green to Almost mint */
+            color: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 26px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            font-size: 16px;
+            color: #fff;
+            padding: 8px 15px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #D6CC99; /* Almost mint */
+        }
+
+        header nav ul li button {
+            background-color: #5E3023; /* Espresso */
+            color: white;
+            font-size: 14px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header nav ul li button:hover {
+            background-color: #445D48; /* Olive green */
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(120deg, #445D48, #D6CC99); /* Olive green to Almost mint */
+            color: #FDE5D4; /* Rosy creme */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            background-color: #5E3023; /* Espresso */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .hero button:hover {
+            background-color: #001524; /* Almost black */
+            transform: scale(1.05);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .blog {
+            background: linear-gradient(180deg, #D6CC99, #FDE5D4); /* Almost mint to Rosy creme */
+            color: #001524; /* Almost black */
+        }
+
+        .blog h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .blog p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
+        .social-links a {
+            color: #5E3023; /* Espresso */
+            font-size: 1rem;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #445D48; /* Olive green */
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #445D48; /* Darker border for contrast */
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact form button {
+            background-color: #5E3023; /* Espresso */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .contact form button:hover {
+            background-color: #445D48; /* Olive green */
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(to bottom, #445D48, #001524); /* Olive green to Almost black */
+            color: #FDE5D4; /* Rosy creme */
+            text-align: center;
+            padding: 15px;
+            position: relative;
+        }
+
+        footer .social-links a {
+            color: #FDE5D4; /* Rosy creme */
+            margin: 0 10px;
+        }
+
+        footer .social-links a:hover {
+            color: #D6CC99; /* Almost mint */
+        }
+
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #001524; /* Almost black */
+            color: #FDE5D4; /* Rosy creme */
+        }
+
+        body.dark-theme h1, 
+        body.dark-theme h2, 
+        body.dark-theme p {
+         color: #FDE5D4; /* Rosy creme */
+       }
+       
+       body.dark-theme .social-links a {
+    color: #FDE5D4; /* Light rosy cream for links */
+    font-size: 1rem;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+        body.dark-theme header {
+            background: linear-gradient(90deg, #001524, #445D48); /* Almost black to Olive green */
+        }
+
+        body.dark-theme .hero {
+            background: linear-gradient(120deg, #001524, #445D48); /* Almost black to Olive green */
+        }
+
+        body.dark-theme .blog {
+            background: linear-gradient(180deg, #445D48, #001524); /* Olive green to Almost black */
+        }
+        body.dark-theme .blog h3 {
+            color:aliceblue;
+        }
+
+        body.dark-theme header nav ul li a {
+            color: #FDE5D4; /* Rosy creme */
+        }
+
+        body.dark-theme header nav ul li a:hover {
+            color: #D6CC99; /* Almost mint */
+        }
+    
+        body.dark-theme header nav ul li button {
+            background-color: #D6CC99; /* Almost mint */
+            color: #001524; /* Almost black */
+        }
+
+        body.dark-theme .hero button {
+            background-color: #D6CC99; /* Almost mint */
+            color: #001524; /* Almost black */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+                text-align: center;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero button {
+                padding: 10px 20px;
+            }
+
+            .blog h2, .services h2, .contact h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Timeless Services</div>
+        <nav>
+            <ul>
+                <li><a href="SBJ.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><button id="themeToggleBtn">Switch Theme</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome</h1>
+        <p>Experience elegance and excellence with us.</p>
+        <button onclick="scrollToSection('blog')">Learn More</button>
+    </section>
+
+    <section id="blog" class="blog">
+        <h2>Why Choose Timeless Services?</h2>
+        <ul>
+          <li>
+            <h3>1. Unmatched Expertise</h3>
+            <p>With years of experience across various industries, we bring deep knowledge and understanding to every project. Our team is committed to delivering solutions that are both effective and sustainable, ensuring long-term success for our clients.</p>
+          </li>
+          <li>
+            <h3>2. Personalized Approach</h3>
+            <p>At Timeless Services, we believe in tailoring our services to your unique needs. We take the time to understand your objectives and challenges, ensuring that our approach is always aligned with your vision. Whether you're a small business or a large corporation, we adapt to provide the best possible results.</p>
+          </li>
+          <li>
+            <h3>3. Reliability and Trust</h3>
+            <p>Trust is the foundation of everything we do. Our clients know they can count on us to deliver high-quality results on time and within budget. We take pride in building strong, lasting relationships based on transparency, reliability, and integrity.</p>
+          </li>
+          <li>
+            <h3>4. Innovation at Its Core</h3>
+            <p>We are always exploring new ways to solve problems and create value. At Timeless Services, we stay ahead of the curve by embracing the latest technologies, methodologies, and industry trends, ensuring that you always have access to the most innovative solutions.</p>
+          </li>
+        </ul>
+      </section>
+    <footer>
+        <p>&copy; 2024 Timeless Services. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#facebook">Facebook</a> |
+            <a href="#twitter">Twitter</a> |
+            <a href="#instagram">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll effect for smooth navigation
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Toggle theme function
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+</html>

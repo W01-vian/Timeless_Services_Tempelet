@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisma Fatima's CV</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            margin: 0;
+            padding-top: 80px; /* Offset for fixed header */
+            transition: background-color 0.3s, color 0.3s;
+            background: linear-gradient(to bottom, #FAE1D4, #CBBE8D);
+            color: #001524;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        header {
+            background-color: #445D48;
+            color: #FDE5D4;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cv-title {
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 20px 0;
+            color: #5E3023;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 150px;
+            width: 30%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            padding: 50px 10%;
+            margin-bottom: 30px;
+            background-color: #FDE5D4;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #5E3023;
+        }
+
+        p, li {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px;
+        }
+
+        /* Dark Theme */
+        .dark-theme {
+            background-color: #001524;
+            color: #FDE5D4;
+        }
+
+        .dark-theme header {
+            background-color: #5E3023;
+            color: #FDE5D4;
+        }
+
+        .dark-theme section {
+            background-color: #5E3023;
+            color: #FDE5D4;
+        }
+
+        .dark-theme h2, 
+        .dark-theme p, 
+        .dark-theme li {
+            color: #FDE5D4; /* Rosy creme */
+        }
+
+        footer {
+            background: linear-gradient(to bottom, #001524, #445D48);
+            color: #CBBE8D;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px; /* Reduce offset for smaller screens */
+            }
+
+            header {
+                padding: 10px 2%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            img {
+                max-width: 120px;
+                width: 40%;
+            }
+
+            section {
+                padding: 30px 5%;
+            }
+
+            table, th, td {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 50px;
+            }
+
+            h1, .cv-title {
+                font-size: 1.5rem;
+            }
+
+            img {
+                max-width: 100px;
+                width: 50%;
+            }
+
+            section {
+                padding: 20px 5%;
+            }
+
+            table, th, td {
+                font-size: 0.8rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+
+        #themeToggleBtn {
+            background-color: #001524;
+            color: #FDE5D4;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #themeToggleBtn:hover {
+            background-color: #445D48;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="themeToggleBtn">Switch Theme</button>
+    </header>
+    <h1 class="cv-title">Bisma Fatima's CV</h1>
+    <img src="https://i.pinimg.com/736x/1f/3f/47/1f3f477844d8dc08f26b2d132c0a256b.jpg" alt="Bisma Fatima's Photo">
+
+    <section>
+        <h2>Objective</h2>
+        <p>
+            A passionate Computer Science student with a flair for programming, graphic designing, and web development. 
+            Eager to apply knowledge in real-world projects while enhancing problem-solving skills and technical expertise.
+        </p>
+    </section>
+
+    <section>
+        <h2>Personal Information</h2>
+        <ul>
+            <li><b>Name:</b> Bisma Fatima</li>
+            <li><b>Father's Name:</b> Inayat Ullah</li>
+            <li><b>Nationality:</b> Pakistani</li>
+            <li><b>Phone No:</b> 0333333333</li>
+            <li><b>Email:</b> example@gmail.com</li>
+            <li><b>Address:</b> British Home, Islamabad</li>
+            <li><b>Marital Status:</b> Single</li>
+            <li><b>Date of Birth:</b> dd/mm/yyyy</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Degree</th>
+                    <th>University</th>
+                    <th>GPA/%age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024 - onwards</td>
+                    <td>BS in Computer Science</td>
+                    <td>NUTECH University</td>
+                    <td>3.75</td>
+                </tr>
+                <tr>
+                    <td>2024</td>
+                    <td>F.Sc</td>
+                    <td>HCCS</td>
+                    <td>90%</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>Matriculation</td>
+                    <td>APS</td>
+                    <td>96%</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Organization</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024</td>
+                    <td>ABC Inc.</td>
+                    <td>Graphic Designer</td>
+                </tr>
+                <tr>
+                    <td>2019 - 2022</td>
+                    <td>LMN Academy</td>
+                    <td>Teacher</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Graphic Designing (Adobe Photoshop, Canva)</li>
+            <li>Programming (C++, HTML, CSS, JavaScript)</li>
+            <li>Problem-Solving</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Languages</h2>
+        <ul>
+            <li>English</li>
+            <li>Urdu</li>
+            <li>Saraiki</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Interests</h2>
+        <ul>
+            <li>Reading</li>
+            <li>Designing</li>
+            <li>Programming</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Reference</h2>
+        <ul>
+            <li><b>Name:</b>MBM</li>
+            <li><b>Address:</b> FFF</li>
+            <li><b>Contact:</b> 08888888888</li>
+            <li><b>Title:</b> CEO (MM Block)</li>
+            <li><b>Email:</b> mm@gmail.com</li>
+        </ul>
+    </section>
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear());</script> - Bisma's CV
+        <p>For any questions, feel free to contact me via email.</p>
+    </footer>
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            themeToggleBtn.textContent = document.body.classList.contains('dark-theme')
+                ? 'Switch Theme'
+                : 'Switch Theme';
+        });
+    </script>
+</body>
+</html>

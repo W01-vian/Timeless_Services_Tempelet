@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #FDE5D4; /* Rosy creme */
+            color: #001524; /* Almost black */
+            line-height: 1.6;
+            transition: all 0.3s ease-in-out;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5E3023; /* Espresso */
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #445D48; /* Olive green */
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #445D48; /* Olive green */
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-size: 1rem;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #445D48, #D6CC99);
+            color: #FDE5D4; /* Rosy creme */
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #463224;
+            text-align: center;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #445D48; /* Olive green */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .social-links a::after {
+            content: "|";
+            margin-left: 10px;
+        }
+
+        .social-links a:last-child::after {
+            content: "";
+        }
+
+        footer {
+            background: #001524; /* Almost black */
+            color: #FDE5D4; /* Rosy creme */
+            text-align: center;
+            padding: 15px;
+        }
+        /* Dark Theme */
+        body.dark-theme {
+            background-color: #001524;
+            color: #FDE5D4;
+        }
+
+        body.dark-theme header {
+            background: #5E3023;
+        }
+        
+        body.dark-theme .hero {
+            background: linear-gradient(135deg, #001524, #445D48);
+        }
+
+        body.dark-theme .about a {
+            color: #D6CC99;
+        }
+
+        body.dark-theme .hero p {
+            color: #FDE5D4;
+        }
+        body.dark-theme .services .service p {
+            color: #0f0d0c;
+        }
+
+        body.dark-theme footer {
+            background: #5E3023;
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .toggle-switch label {
+            display: flex;
+            align-items: center;
+            background-color: #445D48;
+            border-radius: 15px;
+            width: 50px;
+            height: 25px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-switch label::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #FDE5D4;
+            border-radius: 50%;
+            position: absolute;
+            left: 3px;
+            top: 2.5px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + label {
+            background-color: #D6CC99;
+        }
+
+        .toggle-switch input[type="checkbox"]:checked + label::after {
+            transform: translateX(25px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Timeless Services</div>
+        <nav>
+            <ul>
+                <li><a href="SBJ.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+                        <label for="theme-toggle"></label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Timeless Services</h1>
+        <p>In today’s fast-paced digital era, having an aesthetically pleasing, user-friendly website is essential for any organization. <i>Timeless Services</i> embodies this principle with its modern design and seamless functionality. Let’s explore what makes this website an ideal hub for enhancing lifestyles and well-being.
+        </p>
+    </section>
+
+    <section id="about" class="about"> 
+        <h2>About Us</h2>
+        <p>We are dedicated to providing timeless services that enhance your lifestyle and wellbeing.</p>
+        <p>Our major team members are following:</p>
+        <div class="social-links">
+            <a href="Javeria.html">Javeria Faisal</a>
+            <a href="Bisma.html">Bisma Fatima</a>
+            <a href="Sawaira.html">Sawaira Anwar</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Timeless Services. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>
